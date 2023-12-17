@@ -31,7 +31,7 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["src/theme/variables.scss", "src/global.scss", "src/app/component/pokemon-card/pokemon-card.component.scss"],
             "scripts": []
           },
           "configurations": {
@@ -136,7 +136,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "6ef526a0-31a5-4735-84c5-bb31201fd9ba"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

@@ -5,6 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AppComponent } from '../app.component';
+import { PokemonCardComponent } from 'src/app/component/pokemon-card/pokemon-card.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppModule } from '../app.module';
 
 
 @NgModule({
@@ -12,8 +17,11 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    HttpClientModule,
+    BrowserModule,
+    AppModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}

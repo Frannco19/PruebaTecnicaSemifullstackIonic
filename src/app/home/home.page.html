@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="app-container">
+    <h1 class="app-title">Hola Gaston! Bienvenido a la PokeApp</h1>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <h2 class="second-title">Elige tus pokemons Aleatoriamente!</h2>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngIf="team$ | async as team" class="team-container">
+      <div>
+        <p>Pokemon Tipo Fuego</p>
+        <app-pokemon-card [pokemon]="team[0]"></app-pokemon-card>
+      </div>
+      <div>
+        <p>Pokemon Tipo Agua</p>
+        <app-pokemon-card [pokemon]="team[1]"></app-pokemon-card>
+      </div>
+      <div>
+        <p>Pokemon Tipo Electrico</p>
+        <app-pokemon-card [pokemon]="team[2]"></app-pokemon-card>
+      </div>
+      <div>
+        <p>Pokemon Tipo Roca</p>
+        <app-pokemon-card [pokemon]="team[3]"></app-pokemon-card>
+      </div>
+    </div>
   </div>
 </ion-content>
